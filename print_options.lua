@@ -19,9 +19,9 @@ print('Loading model from ' .. opt.model)
 local checkpoint = torch.load(opt.model)
 
 for k, v in pairs(checkpoint.opt) do
-  if type(v) == 'table' then
-    v = table.concat(v, ',')
-  end
-  print(string.format('%s: %s', k, v))
+    if type(v) == 'table' then
+        v = table.concat(v, ',')
+    end
+    print(string.format('%s: %s', k, v))
 end
 
